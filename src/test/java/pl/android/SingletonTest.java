@@ -3,7 +3,6 @@ package pl.android;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Tests for {@link Singleton}
@@ -16,11 +15,11 @@ public class SingletonTest {
      * Test if two singletons are equals (same references).
      */
     @Test
-    public void testIsTwoSingetonsEquals() {
+    public void testIsTwoSingletonsEquals() {
         Singleton singletonOne = Singleton.getInstance();
         Singleton singletonTwo = Singleton.getInstance();
 
-        assertTrue(singletonOne.equals(singletonTwo)); // two singletons references to the same place in memory
+        assertEquals(singletonOne, singletonTwo); // two singletons references to the same place in memory
     }
 
     /**
